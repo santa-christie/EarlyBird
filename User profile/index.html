@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Update Personal Details</title>
+    <script>
+        function validatePhoneNumber() {
+            var phoneNumber = document.getElementById("phone").value;
+            var phoneNumberPattern = /^\d{10}$/;
+
+            if (phoneNumberPattern.test(phoneNumber)) {
+                document.getElementById("error-message").style.display = "none";
+            } else {
+                document.getElementById("error-message").style.display = "block";
+            }
+        }
+    </script>
+
+</head>
+<body>
+<div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+ </div>
+    <div class="container">
+        <h1>Update Personal Details</h1>
+        <form id="updateForm">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" maxlength="10" oninput="validatePhoneNumber()">
+    <p id="error-message" style="color: red; display: none;">Please enter a valid 10-digit phone number.</p>
+
+            
+
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+          <center>
+            <button type="submit">Update Details</button>
+        </center>
+        </form>
+    </div>
+</body>
+</html>
