@@ -21,7 +21,6 @@
 
 <body>
 
-	<!-- for header part -->
 	<header>
 
 		<div class="logosec">
@@ -49,8 +48,7 @@
 		<div class="message">
 			<div class="circle"></div>
 			<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png"
-				class="icn"
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png" class="icn"
 				alt="">
 			<div class="dp">
 			<img src=
